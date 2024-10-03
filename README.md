@@ -7,6 +7,8 @@
 **College Club Website Revamp**
 
 Welcome to the official repository of **TechzRevamp**, the revamped website for **RCCTechz**, the tech club of RCCIIT. This project is open for contributions from the community, and we are excited to work with developers, designers, and content creators to create an awesome, modern website for our club!
+## 🚨Design is present in the [DESIGN.md](./DESIGN.md), please refer to that design !!
+
 
 ## ✨ Tech Stack
 
