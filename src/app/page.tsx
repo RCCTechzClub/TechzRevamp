@@ -1,3 +1,11 @@
+
+import OurWork from "@/components/OurWork";
+
+export default function Home() {
+  return (
+    <div>
+      <OurWork/>
+    </div>
 // import Image from "next/image";
 import Footer from "./components/Footer";
 import TechzMagzine from "./components/TechzMagzine";
@@ -11,5 +19,6 @@ export default function Home() {
       <TechzMagzine />
       <Footer />
     </>
+
   );
 }
