@@ -7,6 +7,8 @@ export default function Home() {
       <OurWork/>
     </div>
 // import Image from "next/image";
+import FAQ from "./components/Faq";
+=======
 import Club from "./components/Club";
 import Footer from "./components/Footer";
 import TechzMagzine from "./components/TechzMagzine";
@@ -19,6 +21,7 @@ export default function Home() {
       </div>
       <Club />
       <TechzMagzine />
+      <FAQ />
       <Footer />
     </>
 
