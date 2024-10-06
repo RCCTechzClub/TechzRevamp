@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import FAQ from "./components/Faq";
 import Footer from "./components/Footer";
 import TechzMagzine from "./components/TechzMagzine";
 
@@ -9,6 +10,7 @@ export default function Home() {
         Welcome to RCCTechz Website Revamp
       </div>
       <TechzMagzine />
+      <FAQ />
       <Footer />
     </>
   );
