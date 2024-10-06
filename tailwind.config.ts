@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+
 
 const svgToDataUri = require("mini-svg-data-uri");
  
@@ -8,17 +9,23 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
  
 
+=======
+/** @type {import('tailwindcss').Config} */
+
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust to your file structure
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors: { 
+        bodyBg : "#121828",
+        gradOne : "#F1DE7E",
+        gradTwo :  "#FFCECE",
+        gradThree : "#E4ED2E"
+      },
+      fontFamily: {
+        sans: ["Inter",'Poppins', 'sans-serif'], // Example font family
       },
     },
   },
