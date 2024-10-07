@@ -9,7 +9,6 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
  
 
-=======
 /** @type {import('tailwindcss').Config} */
 
 const config: Config = {
