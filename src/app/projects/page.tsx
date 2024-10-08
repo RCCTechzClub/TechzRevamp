@@ -1,8 +1,9 @@
-'use client'
-import ProjectItem from '@/components/ProjectItems'
-import SkillComponent from '@/components/SkillComponent'
-import React, { useState } from 'react'
-import rctech from '@/app/assest/rcctech.png'
+"use client";
+import ProjectItem from '@/components/ProjectItems';
+import SkillComponent from '@/components/SkillComponent';
+import React from 'react';
+import { useState } from 'react';
+import rctech from '@/app/assest/rcctech.png';
 import mongodb from '@/app/assest/skills/mongodb.png';
 import postman from '@/app/assest/skills/postman.png';
 import react from '@/app/assest/skills/react.png';
@@ -15,6 +16,11 @@ import js from '@/app/assest/skills/javascript.png';
 import vercel from '@/app/assest/skills/vercel.jpg';
 import express from '@/app/assest/skills/express.png';
 import node from '@/app/assest/skills/node-js.png';
+import Navbar from '../components/Navbar';
+import Footer from '@/components/Footer';
+import { useTheme } from 'next-themes';
+
+
 
 const projects = [
     {
@@ -161,45 +167,50 @@ const skills = [
         "image": node
     }
 ];
-
-
-function page() {
+function Page() {
     const [showAll, setShowAll] = useState<boolean>(false);
+    const { theme, setTheme } = useTheme(); 
+
     const handleViewMore = () => {
-        setShowAll(!showAll);  // Toggle the 'showAll' state
+        setShowAll(!showAll);
     };
+
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
+
+    const isDarkMode = theme === 'dark';
+
     return (
-        <div className='w-full md:px-0 px-20 py-20 bg-[#0F172A] h-auto '>
-            <div className='max-w-4xl mx-auto'>
-                <h2 className='text-6xl text-center my-10'>Skills</h2>
-                <div className='w-full h-auto grid grid-cols-2 sm:grid-cols-4 gap-16 mb-10'>
-                {skills.map((skill) => (
-                    <SkillComponent data={skill} />))
-                }
-                </div>
-                <h2 className='text-6xl text-center my-20 '>Projects</h2>
-
-                <div className='flex flex-col space-y-12 '>
-
-                {
-                        // Show only 5 projects if showAll is false, otherwise show all projects
-                        projects.slice(0, showAll ? projects.length : 3).map((project) => (
-                            <ProjectItem key={project.id} data={project} image={rctech} />
-                        ))
-                    }
-                </div>
-
-                <div className="text-center mt-8">
-                    <button 
-                        onClick={handleViewMore} 
-                        className="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-700 transition"
-                    >
-                        {showAll ? "View Less" : "View More"}
-                    </button>
+        <div
+        className={`${
+          isDarkMode
+            ? 'bg-[#121828] text-gray-100' 
+            : 'bg-gradient-to-r from-blue-500  via-blue-600 to-blue-500 text-gray-900' 
+        } min-h-screen border-4 border-red-500`}
+      >
+            <Navbar />
+            <div className='content w-full md:px-0 px-20 py-20'>
+                <div className='max-w-4xl mx-auto'>
+                    <h2 className='text-6xl text-center my-10'>Skills</h2>
+                    <div className='w-full h-auto grid grid-cols-2 sm:grid-cols-4 gap-16 mb-10'>
+                        {skills.map((skill) => (
+                            <SkillComponent key={skill.id} data={skill} />
+                        ))}
+                    </div>
+                    <h2 className='text-6xl text-center my-20'>Projects</h2>
+                    <div className='flex flex-col space-y-12'>
+                        {
+                            projects.slice(0, showAll ? projects.length : 3).map((project) => (
+                                <ProjectItem key={project.id} data={project} image={rctech} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
+            <Footer />
         </div>
-    )
+    );
 }
 
-export default page
+export default Page;

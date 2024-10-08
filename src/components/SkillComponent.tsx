@@ -50,4 +50,3 @@ function SkillComponent({data}:any) {
 }
 
 export default SkillComponent;
-// 

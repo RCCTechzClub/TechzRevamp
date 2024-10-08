@@ -1,27 +1,36 @@
-html,div{
-    background-color: #121828;
-}
-#NavItems {
-    position: relative;
-    display: inline-block; 
-    cursor: pointer; 
-}
-
-#NavItems::after {
-    content: '';
-    position: absolute; 
-    left: 20px;
-    bottom: -1px; 
-    width: 20px; 
-    height: 2px;
-    background: white; 
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Example CSS */
+html, body {
+    background-color: #121828; /* Dark mode background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Default text color for dark mode */
 }
 
-#NavItems:hover::after {
-    opacity: 1; 
+.navbar {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 61px;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 10; /* Ensure it stays above content */
 }
 
+.content {
+    padding-top: 70px; /* Adjust padding based on navbar height */
+}
 
+/* Add dark mode styles */
+body.light-mode {
+    background-color: #ffffff; /* Light mode background */
+    color: #000000; /* Light mode text color */
+}
 
+body.dark-mode {
+    background-color: #121828; /* Dark mode background */
+    color: #ffffff; /* Dark mode text color */
+}
