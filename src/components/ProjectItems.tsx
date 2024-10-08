@@ -3,10 +3,8 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faGithub } from '@fortawesome/free-solid-svg-icons'; // Updated icon
 import Link from 'next/link';
-// import { fa0 } from '@fortawesome/free-solid-svg-icons';
+import { fa0 } from '@fortawesome/free-solid-svg-icons';
 import rftechlogo from '@/app/assest/rctechlogo.png'
 gsap.registerPlugin(ScrollTrigger);
 
