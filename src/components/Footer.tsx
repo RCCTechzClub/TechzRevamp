@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Importing the SVG assets
 import Logo from '@/app/assest/logo.svg';
@@ -88,6 +89,8 @@ const Footer = () => {
                         <a href="#" className="hover:text-[#39ff14]">Event Page</a>
                         <a href="#" className="hover:text-[#39ff14]">RCCIIT website</a>
                         <a href="#" className="hover:text-[#39ff14]">RCCIIT Github Repos</a>
+                        <Link href="/about-us" className="hover:text-[#39ff14]">About Us </Link>
+                        
                     </div>
 
                 </div>
