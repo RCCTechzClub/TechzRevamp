@@ -46,7 +46,7 @@ export default function FAQ() {
       className={`h-max-screen w-full ${
         isDarkMode 
           ? 'dark:bg-[#243369] bg-[#243369] dark:bg-grid-white/[0.1] bg-grid-black/[0.1]'
-          : 'bg-opacity-100 text-gray-900' 
+          : 'bg-gradient-to-r from-gray-500 to-blue-200' 
       } relative flex items-center justify-center py-2`}
     >
 <div className={`absolute pointer-events-none inset-0 flex items-center justify-center 
@@ -57,7 +57,7 @@ export default function FAQ() {
       <div className="w-full max-w-3xl mx-auto px-6 md:px-10">
         <h2 className="text-3xl md:text-5xl text-center text-white font-bold mb-10">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
-          <div key={index}  className={`mb-4 pb-5 ${isDarkMode ? 'text-white' : 'text-black'} `}>
+          <div key={index}  className={`mb-4 pb-5 ${isDarkMode ? 'text-white' : 'text-blackbg-gradient-to-r from-gray-500 to-blue-200'} `}>
             <button
               onClick={() => toggleFAQ(index)}
               className={`w-full text-left text-lg font-medium flex justify-between items-center p-1 rounded-md hover:bg-gray-700 transition duration-150 ${

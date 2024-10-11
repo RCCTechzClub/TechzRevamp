@@ -186,7 +186,7 @@ function Page() {
         className={`${
           isDarkMode
             ? 'bg-[#121828] text-gray-100' 
-            : 'bg-gradient-to-r from-blue-500  via-blue-600 to-blue-500 text-gray-900' 
+            : 'bg-gradient-to-r from-gray-500 to-blue-200to-blue-500 text-gray-900' 
         } min-h-screen border-4 border-red-500`}
       >
             <Navbar />

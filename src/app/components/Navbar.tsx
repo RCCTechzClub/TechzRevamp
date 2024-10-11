@@ -1,15 +1,14 @@
-"use client";
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import Logo from '../public/Logo.png';
 import '@/styles.css';
-import {ModeToggle} from './button-mode';
+import { ModeToggle } from './button-mode';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -31,27 +30,27 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'Team', id: 'team' },
+    { label: 'Home', id: '/' },
+    { label: 'Team', id: '#' },
     { label: 'Projects', id: 'projects' },
-    { label: 'Events', id: 'events' },
-    { label: 'Notice', id: 'notice' },
+    { label: 'Events', id: '#' },
+    { label: 'Notice', id: '#' },
   ];
 
   return (
-    <div className={`navbar sticky top-0 w-full bg-opacity-30 backdrop-blur-md ${isDarkMode ? 'bg-gray-900' : 'bg-gray-200'} text-white`}>
+    <div className={`navbar sticky top-0 start-0 w-full bg-opacity-30 backdrop-blur-md ${isDarkMode ? 'bg-gray-900' : 'bg-gray-200'} text-white`}>
       <div className="navbar-start flex items-center justify-between w-full">
         <Image src={Logo} alt='Logo' height={50} width={50} />
         <div className="navbar-center hidden lg:flex space-x-4">
           <ul className="menu menu-horizontal flex text-sm">
             {navItems.map((item) => (
               <li key={item.label}>
-                <button
+                <a
+                  href={`${item.id}`}
                   className="block text-lg leading-5 text-gray-200 transition-colors duration-300 p-2 rounded font-extralight"
-                  id='NavItems'
                 >
                   {item.label}
-                </button>
+                </a>
               </li>
             ))}
           </ul>
@@ -70,16 +69,16 @@ const Navbar = () => {
             </svg>
           </button>
           {isOpen && (
-            <ul className="menu dropdown-content mt-3 p-2 shadow bg-gray-800 rounded-box w-52">
+            <ul className="menu dropdown-content mt-3 p-2  pt-28 shadow bg-gray-800 rounded-box w-52">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  <button
+                  <a
+                    href={`${item.id}`}
                     className="block text-lg leading-6 text-gray-200 transition-colors duration-300 p-2 rounded font-extralight"
-                    id='NavItems'
                     onClick={() => setIsOpen(false)} 
                   >
                     {item.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -88,6 +87,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

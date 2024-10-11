@@ -22,11 +22,11 @@ export default function Home() {
         className={`flex flex-col items-center justify-center min-h-screen p-0 gap-4 sm:p-0 font-[family-name:var(--font-geist-sans)] ${
           isDarkMode 
             ? 'bg-[#121828] text-gray-100' 
-            : 'bg-gradient-to-r from-blue-500  via-blue-600 to-blue-500 text-gray-900' 
+            : 'bg-gradient-to-r from-gray-500 to-blue-200to-blue-500 text-gray-900' 
         }`}
       >
         <div className="mt-12 mb-1 text-center">
-          Welcome to RCCTechz Website Revamp
+           <b>Welcome to RCCTechz Website Revamp</b>
         </div>
         <OurWork />
         <Club />
