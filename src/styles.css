@@ -7,18 +7,23 @@ html, body {
     color: #ffffff; /* Default text color for dark mode */
 }
 
+/* Additional styles for smooth transitions */
 .navbar {
-    padding: 0.5rem 1rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 61px;
-    position: sticky; /* Make navbar sticky */
-    top: 0; /* Stick to the top */
-    z-index: 10; /* Ensure it stays above content */
-}
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    
+  }
+  
+  .btn {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
 
 .content {
     padding-top: 70px; /* Adjust padding based on navbar height */
