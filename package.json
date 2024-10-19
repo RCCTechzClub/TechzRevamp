@@ -18,6 +18,9 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.13",
     "next-cloudinary": "^6.14.1",
+
+    "next-themes": "^0.3.0",
+
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.3"
