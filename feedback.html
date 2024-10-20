@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Event Feedback Form</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="eventRating">Event Rating:</label>
+                <select id="eventRating" required>
+                    <option value="" disabled selected>Select your rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="responseMessage" class="response-message"></div>
+    </div>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.response-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+    </style>
+    <script src="script.js">
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const eventRating = document.getElementById('eventRating').value;
+    const feedback = document.getElementById('feedback').value;
+
+    // Simple validation (more can be added)
+    if (!name || !email || !eventRating || !feedback) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    // Here you would typically send the feedback data to a server
+    // For demonstration purposes, we will just display a message
+    document.getElementById('responseMessage').innerText = 'Thank you for your feedback, ' + name + '!';
+    
+    // Reset the form
+    document.getElementById('feedbackForm').reset();
+});
+
+    </script>
+</body>
+</html>
