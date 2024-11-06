@@ -1,5 +1,11 @@
 import React from "react";
 import Image from "next/image";
+
+import Link from "next/link";
+
+// Importing the SVG assets
+
+
 import Logo from '@/app/assest/logo.svg';
 import IconXing from '@/app/assest/xing.svg';
 import IconInstagram from '@/app/assest/instagram.svg';
@@ -82,6 +88,21 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
+
+                    {/* Quick Links Section */}
+
+                    <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 mb-4 md:mb-0 justify-between w-full py-5 text-xl font-normal">
+                        <a href="#" className="hover:text-[#39ff14]">Projects</a>
+                        <a href="#" className="hover:text-[#39ff14]">Team Page</a>
+                        <a href="#" className="hover:text-[#39ff14]">Event Page</a>
+                        <a href="#" className="hover:text-[#39ff14]">RCCIIT website</a>
+                        <a href="#" className="hover:text-[#39ff14]">RCCIIT Github Repos</a>
+                        <Link href="/about-us" className="hover:text-[#39ff14]">About Us </Link>
+                        
+                    </div>
+
+
+
                 </div>
             </div>
         </footer>
