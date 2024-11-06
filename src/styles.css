@@ -1,12 +1,18 @@
-/* Example CSS */
-html, body {
-    background-color: #121828; /* Dark mode background */
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    color: #ffffff; /* Default text color for dark mode */
+    box-sizing: border-box;
 }
 
+html, body {
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Default text color */
+    background-color: #121828; /* Default dark mode background */
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
 .navbar {
     padding: 0.5rem 1rem;
     background: rgba(0, 0, 0, 0.3);
@@ -15,16 +21,22 @@ html, body {
     justify-content: space-between;
     align-items: center;
     height: 61px;
-    position: sticky; /* Make navbar sticky */
-    top: 0; /* Stick to the top */
-    z-index: 10; /* Ensure it stays above content */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.5); /* Slight darkening on hover */
+}
+
+/* Content Padding to Account for Sticky Navbar */
 .content {
     padding-top: 70px; /* Adjust padding based on navbar height */
 }
 
-/* Add dark mode styles */
+/* Light and Dark Mode Toggle Styles */
 body.light-mode {
     background-color: #ffffff; /* Light mode background */
     color: #000000; /* Light mode text color */
@@ -33,4 +45,76 @@ body.light-mode {
 body.dark-mode {
     background-color: #121828; /* Dark mode background */
     color: #ffffff; /* Dark mode text color */
+}
+
+/* Button Styles */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* Link Styles */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1c86ee; /* Slightly darker shade on hover */
+}
+
+/* Headings Styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .content {
+        padding-top: 80px; /* Increase padding for small screens */
+    }
+
+    button {
+        width: 100%; /* Full width for buttons */
+        margin: 0.5rem 0; /* Space between buttons */
+    }
+
+    a {
+        display: block; /* Stack links vertically */
+        margin: 0.5rem 0; /* Space between links */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem; /* Increase padding for very small screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Responsive heading size */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Responsive heading size */
+    }
+
+    h3 {
+        font-size: 1rem; /* Responsive heading size */
+    }
 }
