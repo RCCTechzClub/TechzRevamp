@@ -11,6 +11,22 @@
 Welcome to the official repository of **TechzRevamp**, the revamped website for **RCCTechz**, the tech club of RCCIIT. This project is open for contributions from the community, and we are excited to work with developers, designers, and content creators to create an awesome, modern website for our club!
 ## 🚨Design is present in the [DESIGN.md](./DESIGN.md), please refer to that design !!, and you can see our existing website and take inspiration from that as well [RCCTechz](https://rcctechz.vercel.app/)
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+## This project is now OFFICIALLY accepted for
+
+<div align="center">
+  <img src="https://github.com/amiya-cyber/banner/blob/main/329829127-e79eb6de-81b1-4ffb-b6ed-f018bb977e88.png" alt="GSSoC 2024 Extd" width="60%">
+</div>
+
+<div align="center">
+  <img src="https://github.com/amiya-cyber/banner/blob/main/hacktober.png" alt="Hacktober fest 2024" width="60%">
+</div>
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 
 ## ✨ Tech Stack
 
